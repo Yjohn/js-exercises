@@ -5,7 +5,12 @@
 // - insert the replacement value at the provided index
 
 function replace(arr, index, value) {
-  return; // complete this statement
+  var start = arr.slice(0, index); // slice left part
+  var newArr = start.concat(value);
+  var end = arr.slice(index + 1, arr.length); // slice right part
+  var result = newArr.concat(end); // join arrays together
+  return result; // complete this statement
+  // return; // complete this statement
 }
 
 /* 
@@ -14,8 +19,8 @@ function replace(arr, index, value) {
 var numbers = [1, 3, 3];
 var names = ["Irina", "Ashleigh", "Mozafar"];
 
-var newNumbers = replace(arr, 1, 2);
-var newNames = replace(arr, 2, "Rares");
+var newNumbers = replace(numbers, 1, 2);
+var newNames = replace(names, 1, "Rares");
 
 console.log(numbers);
 console.log(newNumbers);

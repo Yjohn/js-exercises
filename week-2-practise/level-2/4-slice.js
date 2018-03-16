@@ -5,7 +5,11 @@
 // - remove the item at the specified index
 
 function remove(arr, index) {
-  return; // complete this statement
+  // return arr.slice(index); // complete this statement
+  var prefix = arr.slice(0, index);
+  var suffix = arr.slice(index + 1, arr.length);
+  var output = prefix.concat(suffix);
+  return output;
 }
 
 /* 
